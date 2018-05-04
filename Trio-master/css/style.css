@@ -1,0 +1,160 @@
+
+img {
+    display: block;
+    margin-left: auto;  
+    margin-right: auto;
+	position: absolute;
+	bottom:73px;
+	left:32%;
+
+
+}
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	background: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	font-family: 'Changa', sans-serif;
+}
+
+body#background{
+	background: url(../images/world9.jpg)no-repeat 50% 50% fixed ;
+	-webkit-background-size:cover;
+	background-size:cover;
+	-moz-background-size:cover;
+    background-size: cover; 
+
+
+}
+   
+.top-w3lnav {
+    width: 85%;
+	margin:0 auto;
+    padding: 40px
+}
+.navbar-nav {
+    float: none;
+    border-radius: 5px;
+    background: #00001a;
+}
+
+nav.navbar.navbar-default {
+    border: none;
+    background: none;
+}
+
+div#bs-example-navbar-collapse-1 {
+    padding: 0;  
+	text-align:center;
+}
+
+.navbar-right {
+    float: right !important;
+	margin:0;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;  
+}
+
+.navbar-nav > li > a {
+    font-size: 1.4em;
+    display: inline-block;
+    width: 100%;
+}
+
+.w3ls-active {
+    pointer-events: none;
+    cursor: default;
+    
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,.w3ls-active  {
+    color: #000;
+	background: #006699;
+}
+
+.w3l-effect a { 
+	height: 57px; 
+} 
+
+.w3l-effect a:hover::after,
+.w3l-effect a:focus::after,
+.w3l-effect a.active::after {
+	opacity: 1;
+}
+
+.navbar-nav > li {
+    width: 20%;
+    float: left;
+}
+.w3l-effect a:hover::after,.w3ls-active:after {
+    position: absolute;
+    top: -36px;
+    width: 100%;
+    right: 0px;
+    background: transparent;
+    content: "";
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 148px solid transparent;
+    border-bottom: 36px solid #006699;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    text-decoration: none;
+}
+
+.w3ls-banner-text {
+    width: 70%;
+    margin: 5.5em auto;
+	text-align:center;
+}
+h2.agileinfo {
+    text-transform: uppercase;
+    color: #006699;
+    font-size: 9em;
+    letter-spacing: 2px;
+    padding: 0 0;
+    text-shadow: 5px 0px 17px rgba(0, 77, 143, 0.52);
+    border-bottom: 1px solid #000;
+    
+}
+.w3ls-banner-text p {
+    color: #000000;
+    font-size: 3em;
+    font-weight: 600;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    font-family: 'Abril Fatface, cursive';
+    text-transform: capitalize;
+}
+
+.agileinfo-copyright {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    padding: .8em 0;
+    background: #00001a;
+}
+
+.agileinfo-copyright p {
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.w3ls-banner-text {
+	width: 60%;
+	margin: 7em auto;
+	}
