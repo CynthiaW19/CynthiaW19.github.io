@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>The Edge</title>
+<link href="css/keeg.css" type="text/css" rel="stylesheet" media="all">
+<link rel="shortcut icon" href="img/e.png" type="image/x-icon" />
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"rel="stylesheet" media="all">
+
+
+<div class="content">
+
+<div class="slides fade">
+  <img src="img/radi.jpg" class="img1" >
+  <div class="text"></div>
+</div>
+
+<div class="slides fade">
+  <img src="img/radio7.jpg" class="img1" >
+  <div class="text"></div>
+</div>
+
+
+<div class="slides fade">
+  <img src="img/radio4.jpg" class="img1">
+  <div class="text"> </div>
+</div>
+
+<div class="slides fade" >
+  <img src="img/radio6.jpg" class="img1">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<p> The Edge</p>
+<body>
+<div id="Nav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<ul class="nav-bar" id="">
+		<li><font style = "color:#800;">THE EDGE</font></li>
+		<li><a href="#" >Home</a></li>
+		<li><a href="#a">First</a></li>
+		<li><a href="#a">Second</a></li>
+		<li><a href="#a">Third</a></li>
+	</ul>
+</div>
+<button class ="test" onclick="openNav()"> <span> EXPLORE</span></button>
+
+<div class="hover08 column">
+	<div>
+    <figure><a href="https://10.183.2.5/html/trigger/layer2/ors.html"><img src="img/ors.jpg" class="ors"></a><div class="container"><p class="ors1">Orson Wells</p>  <div class="overlay"></div>  <div class="button1"><a href="https://10.183.2.5/html/trigger/layer2/ors.html"> LEARN MORE</a></div></figure>
+    <span>Hover</span>
+  </div>
+
+  <div>
+	<figure><a href="https://10.183.2.5/html/trigger/layer2/how.html"><img src="img/how.jpg" class="how"></a><div class="container1"><p class="class">Howard Stern</p>  <div class="overlay"></div>  <div class="button2"><a href="https://10.183.2.5/html/trigger/layer2/how.html"> LEARN MORE</a></div></figure>
+    <span>Hover</span>
+  </div>
+  <div>
+	<figure><a href="https://10.183.2.5/html/trigger/layer2/matt.html"><img src="img/matt1.jpg" class="matt"></a><div class="container2"><p class="class2">Walter Cronkite</p>  <div class="overlay"></div>  <div class="button3"><a href="https://10.183.2.5/html/trigger/layer2/matt.html"> LEARN MORE</a></div></figure>
+    <span>Hover</span>
+  </div>
+
+</body>
+<script>
+function openNav() {
+    document.getElementById("Nav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("Nav").style.width = "0";
+}
+</script>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+
+<footer>
+
+</footer>
+</html>
+
