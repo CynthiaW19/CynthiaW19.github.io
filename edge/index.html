@@ -9,7 +9,7 @@
 <div class="content">
 
 <div class="slides fade">
-  <img src="img/radi.jpg" class="img1" >
+  <img src="img/radio4.jpg" class="img1" >
   <div class="text"></div>
 </div>
 
@@ -20,12 +20,12 @@
 
 
 <div class="slides fade">
-  <img src="img/radio4.jpg" class="img1">
+  <img src="img/radio6.jpg" class="img1">
   <div class="text"> </div>
 </div>
 
 <div class="slides fade" >
-  <img src="img/radio6.jpg" class="img1">
+  <img src="img/radi.jpg" class="img1">
   <div class="text"></div>
 </div>
 
@@ -40,25 +40,26 @@
 	<ul class="nav-bar" id="">
 		<li><font style = "color:#800;">THE EDGE</font></li>
 		<li><a href="#" >Home</a></li>
-		<li><a href="#a">First</a></li>
-		<li><a href="#a">Second</a></li>
-		<li><a href="#a">Third</a></li>
+		<li><a href="#a">Team</a></li>
+		<li><a href="#a">Style</a></li>
+		<li><a href="#a">Program</a></li>
+		<li><a href="#a">Contact</a></li>
 	</ul>
 </div>
 <button class ="test" onclick="openNav()"> <span> EXPLORE</span></button>
 
 <div class="hover08 column">
 	<div>
-    <figure><a href="https://10.183.2.5/html/trigger/layer2/ors.html"><img src="img/ors.jpg" class="ors"></a><div class="container"><p class="ors1">Orson Wells</p>  <div class="overlay"></div>  <div class="button1"><a href="https://10.183.2.5/html/trigger/layer2/ors.html"> LEARN MORE</a></div></figure>
+    <figure><a href="https://10.183.2.5/html/trigger/layer2/ors.html" target="_blank"><img src="img/ors.jpg" class="ors"></a><div class="container"><p class="ors1">Our Team</p>  <div class="overlay"></div>  <div class="button1"><a href="https://10.183.2.5/html/trigger/layer2/ors.html" target="_blank"> LEARN MORE</a></div></figure>
     <span>Hover</span>
   </div>
 
   <div>
-	<figure><a href="https://10.183.2.5/html/trigger/layer2/how.html"><img src="img/how.jpg" class="how"></a><div class="container1"><p class="class">Howard Stern</p>  <div class="overlay"></div>  <div class="button2"><a href="https://10.183.2.5/html/trigger/layer2/how.html"> LEARN MORE</a></div></figure>
+	<figure><a href="https://10.183.2.5/html/trigger/layer2/how.html" target="_blank"><img src="img/how.jpg" class="how"></a><div class="container1"><p class="class">Our Style</p>  <div class="overlay"></div>  <div class="button2"><a href="https://10.183.2.5/html/trigger/layer2/how.html"target="_blank"> LEARN MORE</a></div></figure>
     <span>Hover</span>
   </div>
   <div>
-	<figure><a href="https://10.183.2.5/html/trigger/layer2/matt.html"><img src="img/matt1.jpg" class="matt"></a><div class="container2"><p class="class2">Walter Cronkite</p>  <div class="overlay"></div>  <div class="button3"><a href="https://10.183.2.5/html/trigger/layer2/matt.html"> LEARN MORE</a></div></figure>
+	<figure><a href="http://tritech.ksd.org/Programs/Radio-Broadcasting-and-Production" target="_blank"><img src="img/matt1.jpg" class="matt"></a><div class="container2"><p class="class2">Our Program</p>  <div class="overlay"></div>  <div class="button3"><a href="http://tritech.ksd.org/Programs/Radio-Broadcasting-and-Production" target="_blank"> LEARN MORE</a></div></figure>
     <span>Hover</span>
   </div>
 
@@ -73,36 +74,38 @@ function closeNav() {
 }
 </script>
 
-<script>
+  <script type="text/javascript">
+var slideIndex = 0;
+  var slides = document.getElementsByClassName("slides");
 
-var slideIndex = 1;
-showSlides(slideIndex);
+showSlides();
+
+function showSlides() {    
+    var i;    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 10000); // Change image every 5 seconds
+}
+
+function currentSlide(no) {
+    var i;    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex = no;
+    slides[no-1].style.display = "block";
+}
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  var newslideIndex = slideIndex + n;
+  if(newslideIndex < 4 && newslideIndex > 0){
+     currentSlide(newslideIndex);
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
 }
-
-
 </script>
 
 
